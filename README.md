@@ -22,6 +22,7 @@ It will be available on the request.
 Entropy:
 10-fold cross-validation with random forest binary classification of 493 trees and entropy criterion was: [0.99993464 0.99993464 0.99991285 0.99986928 0.99993464 0.99989107 0.99995643 0.99993464 0.99989107 0.99989107]. The average accuracy is 0.999915 and the standard deviation is 0.000027.
 
+Gini impurity: 
 10-fold cross-validation with random forest binary classification of 493 trees and Gini impurity:
 with Gini impurity was calculated: [0.99993464 0.99986928 0.99989107 0.99984749 0.99993464 0.99989107 0.99995643 0.99993464 0.99982571 0.99984749]. The average accuracy with Gini impurity criterion is 0.999893 and the standard deviation is 0.000043. 
 
