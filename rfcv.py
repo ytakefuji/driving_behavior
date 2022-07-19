@@ -15,7 +15,6 @@ print("trees:",trees)
 y = taco['Normal']
 X=taco.drop(['Normal','Event Id'],axis=1)
 from sklearn.ensemble import RandomForestClassifier
-#from sklearn.model_selection import cross_val_score
 from sklearn.model_selection import cross_validate
 from sklearn.metrics import *
 from sklearn.model_selection import ShuffleSplit
@@ -26,8 +25,6 @@ scoring={'accuracy' : make_scorer(accuracy_score),
         'recall' : make_scorer(recall_score),
         'f1_score' : make_scorer(f1_score)}
 scores = cross_validate(clf, X, y, cv=cv,scoring=scoring)
-#scores = cross_val_score(clf, X, y, cv=cv,scoring=scoring)
-#print(scores)
 print('test_accuracy:',scores['test_accuracy'])
 print('test_accuracy mean:',sum(scores['test_accuracy'])/10.)
 print('test_precision:',scores['test_precision'])
@@ -36,4 +33,3 @@ print('test_recall:',scores['test_recall'])
 print('test_recall mean:',sum(scores['test_recall'])/10.)
 print('test_f1_score:',scores['test_f1_score'])
 print('test_f1_score mean:',sum(scores['test_f1_score'])/10.)
-#print(scores,scores.mean(),round(scores.std(),6))
